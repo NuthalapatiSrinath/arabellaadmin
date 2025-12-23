@@ -5,7 +5,7 @@ import { API_ROUTES } from "./apiRoutes"; // Adjust path if needed
 const apiClient = axios.create({
   // Ensure this matches your backend URL.
   // If you had a specific config here, keep it.
-  baseURL: "http://localhost:4000/api",
+  baseURL: "https://arabella-backend.vercel.app/api",
   headers: {
     "Content-Type": "application/json",
   },
