@@ -24,8 +24,12 @@ export const createRoom = createAsyncThunk(
   "rooms/createRoom",
   async (formData, { rejectWithValue }) => {
     try {
-      // 🛑 FIX: Removed manual 'Content-Type' header. Axios sets this automatically with the correct boundary.
-      const response = await apiClient.post(API_ROUTES.CREATE_ROOM, formData);
+      // ✅ FIX: Explicitly set Content-Type to undefined.
+      // This forces Axios to remove the default 'application/json' header,
+      // allowing the browser to set 'multipart/form-data' with the correct boundary.
+      const response = await apiClient.post(API_ROUTES.CREATE_ROOM, formData, {
+        headers: { "Content-Type": undefined },
+      });
       return response.data.data;
     } catch (error) {
       return rejectWithValue(
@@ -40,10 +44,13 @@ export const updateRoom = createAsyncThunk(
   "rooms/updateRoom",
   async ({ id, formData }, { rejectWithValue }) => {
     try {
-      // 🛑 FIX: Removed manual 'Content-Type' header here too.
+      // ✅ FIX: Explicitly set Content-Type to undefined here too.
       const response = await apiClient.put(
         API_ROUTES.UPDATE_ROOM(id),
-        formData
+        formData,
+        {
+          headers: { "Content-Type": undefined },
+        }
       );
       return response.data.data;
     } catch (error) {
