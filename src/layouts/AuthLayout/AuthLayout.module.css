@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #ffffff;
+}
+
+.brandSection {
+  flex: 1;
+  background-color: #111827; /* Dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional: Add a subtle pattern overlay or image to brandSection here */
+
+.brandContent {
+  max-width: 400px;
+  z-index: 2;
+}
+
+.brandName {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  letter-spacing: -1px;
+}
+
+.brandTagline {
+  font-size: 1.2rem;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+.formSection {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #f9fafb;
+}
+
+.formCard {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .brandSection {
+    display: none;
+  }
+  .formSection {
+    background-color: #fff;
+  }
+  .formCard {
+    box-shadow: none;
+    padding: 0;
+  }
+}

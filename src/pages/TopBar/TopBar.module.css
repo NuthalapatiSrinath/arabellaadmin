@@ -1,0 +1,361 @@
+/* TopBar.module.css */
+
+/* --- 1. MAIN NAVIGATION CONTAINER --- */
+.mainNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: all 0.4s ease-in-out;
+
+  /* Initial State: Transparent Gradient for readability over video */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8) 0%,
+    transparent 100%
+  );
+  border-bottom: none;
+}
+
+/* SCROLLED STATE: Solid Black */
+.stickyShadow {
+  background: #000000;
+  padding: 15px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border-bottom: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- 2. LOGO (Text Based) --- */
+.logoGroup {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoText {
+  font-family: "Cinzel", "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.logoSub {
+  font-family: "Inter", sans-serif;
+  font-size: 0.65rem;
+  color: #c5a059; /* Gold */
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* --- 3. NAVIGATION LINKS --- */
+.navLinks {
+  display: flex;
+  gap: 35px;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navLinks a:hover {
+  color: #c5a059;
+}
+
+.linkActive {
+  color: #c5a059 !important;
+}
+
+/* --- 4. ACTIONS (Login & Signup) --- */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.authButtons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* LOGIN BUTTON */
+.loginBtn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.loginBtn:hover {
+  color: #c5a059;
+}
+
+/* SIGN UP BUTTON */
+.signupBtn {
+  background-color: #c5a059;
+  color: #000000;
+  border: none;
+  padding: 12px 24px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.signupBtn:hover {
+  background-color: #e0b86e;
+  transform: translateY(-1px);
+}
+
+/* BOOK NOW BUTTON */
+.bookBtn {
+  background-color: #c5a059;
+  color: #000000;
+  border: none;
+  padding: 12px 24px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  margin-left: 5px;
+}
+
+.bookBtn:hover {
+  background-color: #e0b86e;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(197, 160, 89, 0.3);
+}
+
+/* --- 5. USER PROFILE --- */
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.userName {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logoutBtn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.logoutBtn:hover {
+  color: #ef4444;
+}
+
+/* --- 6. MOBILE MENU --- */
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.mobileMenuContainer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.menuOpen {
+  max-height: 100vh;
+  padding-bottom: 20px;
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+}
+
+.mobileLinks a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: "Inter", sans-serif;
+  transition: color 0.3s;
+}
+
+.mobileLinks a:hover {
+  color: #c5a059;
+  padding-left: 5px;
+}
+
+.mobileAuthRow {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.mobileAuthBtn {
+  flex: 1;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 12px 0;
+  text-align: center;
+  border-radius: 0;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.mobileAuthBtn:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mobileBtnWrapper {
+  width: 100%;
+  margin-top: 0;
+}
+
+.contactBtnMobile {
+  display: block;
+  width: 100%;
+  background-color: #c5a059;
+  color: #000000;
+  padding: 14px 0;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contactBtnMobile:hover {
+  background-color: #e0b86e;
+}
+
+@media (max-width: 1024px) {
+  .navLinks,
+  .authButtons {
+    display: none;
+  }
+  .mobileMenuBtn {
+    display: block;
+  }
+  .container {
+    padding: 0 20px;
+  }
+  .bookBtn {
+    display: none;
+  }
+}
+/* ... existing code ... */
+
+/* --- 7. NEW DROPDOWN MENU --- */
+.userProfile {
+  position: relative; /* Needed to anchor the dropdown */
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 15px; /* Space from name */
+  background-color: #111; /* Dark background */
+  border: 1px solid #333;
+  border-radius: 4px;
+  min-width: 180px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  z-index: 2000;
+  overflow: hidden;
+}
+
+.dropdownItem {
+  padding: 12px 20px;
+  color: #fff;
+  font-size: 0.85rem;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s;
+  cursor: pointer;
+  border-bottom: 1px solid #222;
+}
+
+.dropdownItem:last-child {
+  border-bottom: none;
+}
+
+.dropdownItem:hover {
+  background-color: #222;
+  color: #c5a059; /* Gold hover */
+}

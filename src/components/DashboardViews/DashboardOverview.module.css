@@ -1,0 +1,162 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+.welcomeBanner {
+  margin-bottom: 2rem;
+}
+
+.welcomeBanner h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+}
+
+.welcomeBanner p {
+  color: #6b7280;
+  margin: 0;
+}
+
+/* --- Stats Grid --- */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.iconBox {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Icon Colors */
+.gold {
+  background-color: #fffbeb;
+  color: #b45309;
+}
+.green {
+  background-color: #f0fdf4;
+  color: #15803d;
+}
+.blue {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+}
+.purple {
+  background-color: #f3e8ff;
+  color: #7e22ce;
+}
+
+.statInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.statInfo h4 {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 4px 0;
+}
+
+.subtext {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+/* --- Secondary Section --- */
+.detailSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.detailCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.cardHeader h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.bigNumber {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.highlightText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c5a365; /* Arabella Gold */
+  margin-bottom: 0.5rem;
+}
+
+.detailCard p {
+  margin: 0;
+  color: #9ca3af;
+  font-size: 0.875rem;
+}

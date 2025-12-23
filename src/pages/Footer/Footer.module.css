@@ -1,0 +1,272 @@
+/* --- Global Variables (Ensure these exist in your global css or root) --- */
+:root {
+  --Black_Color: #111111;
+  --White_Color: #ffffff;
+  --Primary_Color: #c5a365;
+  --Font_Family: "Helvetica", "Arial", sans-serif;
+  --Font_Brand: "Times New Roman", Times, serif;
+}
+
+.footer {
+  background-color: var(--Black_Color);
+  color: var(--White_Color);
+  padding: 60px 0 30px 0; /* Increased top padding slightly for breathability */
+  font-family: var(--Font_Family);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- The Grid Layout --- */
+/* Desktop: 5 Columns */
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1.3fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+/* --- Brand Column --- */
+.brandColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-right: 20px;
+}
+
+.logoRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.brandName {
+  font-family: var(--Font_Brand);
+  font-size: 32px;
+  color: var(--White_Color);
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.brandSub {
+  font-family: var(--Font_Family);
+  font-size: 11px;
+  color: var(--Primary_Color);
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 3px;
+  display: block;
+}
+
+.tagline {
+  color: #a0a0a0;
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 85%;
+}
+
+.socialRow {
+  display: flex;
+  gap: 12px;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--White_Color);
+  transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+  background-color: var(--Primary_Color);
+  border-color: var(--Primary_Color);
+  transform: translateY(-2px);
+}
+
+/* --- Link Columns --- */
+.linkColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heading {
+  font-family: var(--Font_Family);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--White_Color);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.list a {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  transition: all 0.2s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.list a:hover {
+  color: var(--Primary_Color);
+  transform: translateX(5px);
+}
+
+/* --- Contact Column --- */
+.contactColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  color: #a0a0a0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.contactItem a {
+  color: #a0a0a0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contactItem a:hover {
+  color: var(--Primary_Color);
+}
+
+.icon {
+  color: var(--Primary_Color);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* --- Copyright --- */
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 30px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.copyright p {
+  color: #666;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================= */
+
+/* Tablet (1024px) */
+@media (max-width: 1024px) {
+  .grid {
+    /* Change to 3 columns */
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+  }
+
+  /* 1. Brand takes full top row */
+  .brandColumn {
+    grid-column: span 3;
+    align-items: center;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .logoRow {
+    align-items: center;
+  }
+
+  .tagline {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .socialRow {
+    justify-content: center;
+  }
+
+  /* 2. Contact takes full bottom row (to balance the 3 links in the middle) */
+  .contactColumn {
+    grid-column: span 3;
+    align-items: center; /* Center content */
+  }
+
+  /* Fix contact items alignment for centered layout */
+  .contactItem {
+    justify-content: center;
+  }
+}
+
+/* Mobile (768px) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0;
+  }
+
+  .grid {
+    /* Stack everything in 1 column */
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  /* Reset grid spans */
+  .brandColumn,
+  .contactColumn {
+    grid-column: auto;
+  }
+
+  /* Center Align Link Columns */
+  .linkColumn {
+    align-items: center;
+  }
+
+  /* Remove hover shift on mobile touch screens */
+  .list a:hover {
+    transform: none;
+    color: var(--Primary_Color);
+  }
+
+  /* Stack contact items cleanly if needed, or keep centered */
+  .contactItem {
+    justify-content: center;
+    text-align: center;
+  }
+}

@@ -1,0 +1,218 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #6b7280;
+}
+
+/* Logistics Stats */
+.statsRow {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.statBox {
+  background: white;
+  flex: 1;
+  padding: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.statLabel {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.statValue {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #111827;
+  margin-top: 5px;
+}
+.textYellow {
+  color: #d97706;
+}
+
+/* Toolbar */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.searchWrapper {
+  position: relative;
+  flex: 1;
+  max-width: 350px;
+}
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+.searchWrapper input {
+  width: 100%;
+  padding: 10px 10px 10px 38px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  outline: none;
+}
+.filterWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  padding: 0 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  height: 40px;
+}
+.filterWrapper select {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* Table */
+.tableCard {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.table th {
+  background: #f9fafb;
+  padding: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e5e7eb;
+}
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
+  color: #1f2937;
+  vertical-align: middle;
+}
+.table tr:hover {
+  background: #f9fafb;
+}
+
+.guestName {
+  font-weight: 600;
+  color: #111827;
+}
+.guestRef {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  font-family: monospace;
+}
+.guestContact {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+.roomName {
+  font-weight: 500;
+}
+.dates {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 2px;
+}
+.price {
+  font-weight: 700;
+  font-family: monospace;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.green {
+  background: #ecfdf5;
+  color: #059669;
+}
+.blue {
+  background: #eff6ff;
+  color: #2563eb;
+}
+.red {
+  background: #fef2f2;
+  color: #dc2626;
+}
+.yellow {
+  background: #fffbeb;
+  color: #d97706;
+}
+.gray {
+  background: #f3f4f6;
+  color: #4b5563;
+} /* Added for Checked Out */
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.miniSelect {
+  padding: 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  outline: none;
+}
+.iconBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  color: #4b5563;
+  transition: 0.2s;
+}
+.iconBtn:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+.btnDelete:hover {
+  background: #fef2f2;
+  color: #dc2626;
+}
+.noData {
+  text-align: center;
+  padding: 3rem;
+  color: #9ca3af;
+}
+/* Add this to your existing CSS file */
+.textGreen {
+  color: #059669;
+  display: flex;
+  align-items: center;
+}
